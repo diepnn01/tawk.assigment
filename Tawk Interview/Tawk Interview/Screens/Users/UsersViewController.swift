@@ -22,13 +22,13 @@ class UsersViewController: UIViewController {
         setupData()
         if let reachability = AppDependency.shared.reachability {
             NotificationCenter.default.publisher(for: .reachabilityChanged, object: reachability)
-                .sink { notification in
+                .sink { [weak self] notification in
                     let reachability = notification.object as? Reachability
                     switch reachability?.connection {
                     case .wifi, .cellular:
-                        self.viewModel.getUsers()
+                        self?.viewModel.getUsers()
                     case .unavailable:
-                        self.showNetworkAlert()
+                        self?.showNetworkAlert()
                     default: break
                     }
                     
@@ -40,7 +40,8 @@ class UsersViewController: UIViewController {
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
-    func setup() {
+
+    private func setup() {
         if self.navigationController?.viewControllers.first == self { // init when first screen from storyboard
             viewModel = UsersViewModelImpl(model: UsersModel(), apiService: AppDependency.shared.appApi, persistence: AppDependency.shared.persistence)
             dataSource = UsersDataSourceImpl()
@@ -50,7 +51,7 @@ class UsersViewController: UIViewController {
         self.dataSource.attach(tableView: tableView)
     }
 
-    func onHandelViewModel() {
+    private func onHandelViewModel() {
         viewModel.onNewUsers
             .receive(on: DispatchQueue.main)
             .sink { [weak self]users in
@@ -68,7 +69,7 @@ class UsersViewController: UIViewController {
             }.store(in: &stores)
     }
     
-    func onHandleDataSource() {
+    private func onHandleDataSource() {
         dataSource.onTap.sink {[weak self] user in
             self?.openDetailUser(with: user.login ?? "")
         }.store(in: &stores)
@@ -77,7 +78,7 @@ class UsersViewController: UIViewController {
         }.store(in: &stores)
     }
     
-    func setupData() {
+    private func setupData() {
         self.viewModel.getUsers()
     }
     

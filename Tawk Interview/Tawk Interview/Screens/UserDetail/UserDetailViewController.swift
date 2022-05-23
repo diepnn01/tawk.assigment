@@ -23,15 +23,16 @@ class UserDetailViewController: UIViewController {
     func handleViewModel() {
         self.viewModel.onGetUser
             .receive(on: DispatchQueue.main)
-            .sink { user in
-            self.avatarImageView.loadImage(url: user?.avatarURL ?? "")
-            self.basicInfoView.setData(user: user)
-            self.title = user?.name
+            .sink { [weak self] user in
+            self?.avatarImageView.loadImage(url: user?.avatarURL ?? "")
+            self?.basicInfoView.setData(user: user)
+            self?.title = user?.name
         }.store(in: &stores)
+
         self.viewModel.onGetNote
             .receive(on: DispatchQueue.main)
-            .sink { note in
-                self.noteTextView.text = note
+            .sink { [weak self] note in
+                self?.noteTextView.text = note
         }.store(in: &stores)
     }
     
