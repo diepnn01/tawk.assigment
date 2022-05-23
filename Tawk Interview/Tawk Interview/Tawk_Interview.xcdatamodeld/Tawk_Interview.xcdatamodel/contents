@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="UserEntry" representedClassName="UserEntry" syncable="YES" codeGenerationType="class">
+        <attribute name="avatar_url" optional="YES" attributeType="String"/>
+        <attribute name="bio" optional="YES" attributeType="String"/>
+        <attribute name="blog" optional="YES" attributeType="String"/>
+        <attribute name="company" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="events_url" optional="YES" attributeType="String"/>
+        <attribute name="followers" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="followers_url" optional="YES" attributeType="String"/>
+        <attribute name="following" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="following_url" optional="YES" attributeType="String"/>
+        <attribute name="gists_url" optional="YES" attributeType="String"/>
+        <attribute name="gravatar_id" optional="YES" attributeType="String"/>
+        <attribute name="hireable" optional="YES" attributeType="String"/>
+        <attribute name="html_url" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="login" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="node_id" optional="YES" attributeType="String"/>
+        <attribute name="organizations_url" optional="YES" attributeType="String"/>
+        <attribute name="public_gists" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="public_repos" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="received_events_url" optional="YES" attributeType="String"/>
+        <attribute name="repos_url" optional="YES" attributeType="String"/>
+        <attribute name="site_admin" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="starred_url" optional="YES" attributeType="String"/>
+        <attribute name="subscriptions_url" optional="YES" attributeType="String"/>
+        <attribute name="twitter_username" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="UserNoteEntry" representedClassName="UserNoteEntry" syncable="YES" codeGenerationType="class">
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="user_name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="UserSelected" representedClassName="UserSelected" syncable="YES" codeGenerationType="class">
+        <attribute name="user_name" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="UserEntry" positionX="-63" positionY="-18" width="128" height="479"/>
+        <element name="UserNoteEntry" positionX="-54" positionY="153" width="128" height="59"/>
+        <element name="UserSelected" positionX="-36" positionY="162" width="128" height="44"/>
+    </elements>
+</model>

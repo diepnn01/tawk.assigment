@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserBasicInfoView" customModule="Tawk_Interview" customModuleProvider="target">
+            <connections>
+                <outlet property="blogLabel" destination="NSV-8H-mId" id="1M6-AV-2Ty"/>
+                <outlet property="companyLabel" destination="JF3-Nq-sUN" id="Ahs-UE-dbO"/>
+                <outlet property="followerLabel" destination="NNI-6U-AfD" id="f8b-U7-frU"/>
+                <outlet property="followingLabel" destination="bZf-dm-aqI" id="xeM-Tl-GWJ"/>
+                <outlet property="infoContainerView" destination="6qB-rN-fxm" id="Sb0-Ia-8wM"/>
+                <outlet property="nameLabel" destination="M8f-PS-r2Q" id="wip-QE-zOU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="331"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="6qB-rN-fxm">
+                    <rect key="frame" x="0.0" y="88" width="414" height="243"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: Github" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8f-PS-r2Q">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company: Github" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JF3-Nq-sUN">
+                            <rect key="frame" x="0.0" y="81" width="414" height="81"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blog: www.apple.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSV-8H-mId">
+                            <rect key="frame" x="0.0" y="162" width="414" height="81"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hyx-Xc-lC0">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Follower: 120" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNI-6U-AfD">
+                            <rect key="frame" x="0.0" y="12" width="207" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following: 120" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZf-dm-aqI">
+                            <rect key="frame" x="207" y="12" width="207" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="xNH-zp-vdw"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="6qB-rN-fxm" firstAttribute="top" secondItem="hyx-Xc-lC0" secondAttribute="bottom" id="2IC-qA-cUj"/>
+                <constraint firstItem="6qB-rN-fxm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2QE-1p-adf"/>
+                <constraint firstItem="hyx-Xc-lC0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="6tw-eg-ZAf"/>
+                <constraint firstItem="6qB-rN-fxm" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="H5q-jg-szZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hyx-Xc-lC0" secondAttribute="trailing" id="KFc-xq-7bC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6qB-rN-fxm" secondAttribute="trailing" id="Yvy-ae-SQQ"/>
+                <constraint firstItem="hyx-Xc-lC0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="b8D-yQ-69z"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="262.16517857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
